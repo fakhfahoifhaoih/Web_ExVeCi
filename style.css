@@ -1,0 +1,187 @@
+/* Resetting the styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #e4e9f2);
+    color: #333;
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 900px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.container:hover {
+    transform: translateY(-10px); /* Subtle hover effect */
+}
+
+h1 {
+    font-size: 2.8rem;
+    color: #4A90E2;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+h1:hover {
+    color: #357ab7; /* Hover effect for title */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+label {
+    font-size: 1.1rem;
+    color: #555;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+label:hover {
+    color: #4A90E2;
+}
+
+select,
+textarea,
+input {
+    padding: 12px;
+    font-size: 1.1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-top: 5px;
+    width: 100%;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+select:focus,
+textarea:focus,
+input:focus {
+    border-color: #4A90E2;
+    background-color: #f3faff;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.media-input {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+button {
+    background-color: #4A90E2;
+    color: white;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 48%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ab7;
+    transform: translateY(-3px); /* Subtle button hover effect */
+}
+
+button:active {
+    transform: translateY(1px); /* Button active effect */
+}
+
+#result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#textResult {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+#downloadLink {
+    display: block;
+    margin-top: 15px;
+    color: #4A90E2;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#downloadLink:hover {
+    color: #357ab7;
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    select,
+    input,
+    textarea {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    form {
+        gap: 15px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 1rem;
+    }
+}
