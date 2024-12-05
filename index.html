@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enkripsi Media, File & Database</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enkripsi & Dekripsi Text, Gambar, Audio, Video, File, dan Database Menggunakan Vigenere cipher</h1>
+        
+        <form id="mediaForm">
+            <label for="mediaType">Pilih jenis:</label>
+            <select id="mediaType" required>
+                <option value="text">Teks</option>
+                <option value="image">Gambar</option>
+                <option value="audio">Audio</option>
+                <option value="video">Video</option>
+                <option value="file">File</option>
+                <option value="database">Database</option>
+            </select>
+
+            <div id="textInputContainer" class="media-input">
+                <label for="textInput">Masukkan teks:</label>
+                <textarea id="textInput" rows="5" placeholder="Masukkan teks di sini..."></textarea>
+            </div>
+
+            <div id="fileInputContainer" class="media-input" style="display: none;">
+                <label for="fileInput">Pilih file:</label>
+                <input type="file" id="fileInput">
+            </div>
+
+            <div id="databaseInputContainer" class="media-input" style="display: none;">
+                <label for="dbKeyInput">Data untuk disimpan ke database:</label>
+                <textarea id="dbKeyInput" rows="5" placeholder="Masukkan data database..."></textarea>
+            </div>
+
+            <label for="keyInput">Masukkan kunci:</label>
+            <input type="text" id="keyInput" placeholder="Kunci" required>
+            
+            <div class="buttons">
+                <button type="button" id="encryptButton">Enkripsi</button>
+                <button type="button" id="decryptButton">Dekripsi</button>
+            </div>
+        </form>
+        
+        <div id="result">
+            <h2>Hasil:</h2>
+            <textarea id="textResult" rows="5" readonly style="display: none;"></textarea>
+            <canvas id="imageCanvas" style="display: none;"></canvas>
+            <audio id="audioPlayer" controls style="display: none;"></audio>
+            <video id="videoPlayer" controls style="display: none;"></video>
+            <a id="downloadLink" download style="display: none;">Unduh Hasil</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
